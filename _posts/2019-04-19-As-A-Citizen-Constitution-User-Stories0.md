@@ -2,6 +2,7 @@
 layout: post
 title:  "As A Citizen, I created User Stories"
 categories: Governance User Stories
+date: 2019-04-19
 ---
 ![1](/assets/images/userstorymachine.png){:width="80%" :style="display:block; margin-left:auto; margin-right:auto"}
 
