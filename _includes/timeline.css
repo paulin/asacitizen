@@ -1,0 +1,43 @@
+/* variables */
+:root {
+  --node-color: #ccc;
+  --node-size: 20px; /* size of circle */
+  --line-color: #ccc;
+  --line-width: 8px; /* width of strokes */
+  --padding-unit: 20px;
+  --timeline-background-color: #fff; /* required */
+}
+.row {
+  background-color: var(--timeline-background-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.left,
+.right {
+  align-items: center;
+  display: flex;
+  padding: var(--padding-unit);
+}
+.left {
+  box-shadow: inset calc(-1 * var(--line-width)) 0 0 var(--line-color);
+  justify-content: flex-end;
+  padding-right: calc(2 * var(--padding-unit));
+  position: relative;
+  text-align: left;
+}
+.left:after {
+  content: "";
+  display: block;
+  background-color: var(--timeline-background-color);
+  border-radius: 100%;
+  border: var(--line-width) solid var(--node-color);
+  height: var(--node-size);
+  width: var(--node-size);
+  position: absolute;
+  right: calc((-0.5 * var(--node-size)) + calc(-0.5 * var(--line-width)));
+  top: calc(50% - var(--node-size));
+}
+.right {
+  padding-left: calc(2 * var(--padding-unit));
+}
